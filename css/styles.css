@@ -1,8 +1,14 @@
 @import "reset.css";
-*{
+
+* {
     box-sizing: border-box;
 }
-nav{
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -13,38 +19,46 @@ nav{
     top: 0;
     z-index: 2;
 }
-.logo-left{
-display: flex;
-align-items: center;
-margin-left: 1rem;
+
+.logo-left {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
 }
-.logo{
+
+.logo {
     width: 5rem;
 }
-.h2-conf{
+
+.h2-conf {
     font-size: 1.3rem;
     color: white;
 }
-.lista{
+
+.lista {
     text-decoration: none;
     color: #9c9c9c;
 }
-.lista:hover{
+
+.lista:hover {
     color: #ffffff;
     transition: all;
     transition-duration: 300ms;
 }
-.menu{
-    display:flex;  
+
+.menu {
+    display: flex;
     margin-right: 1rem;
 }
-span{
+
+#comprar {
     color: #27ce3d;
-} 
-header{
+}
+
+header {
     width: 100%;
     height: 70vh;
-    background: linear-gradient(to right, rgba(15, 15, 15, 0.5), rgba(22, 18, 18, 0.5)),url(../assets/ba1.jpg);
+    background: linear-gradient(to right, rgba(15, 15, 15, 0.5), rgba(22, 18, 18, 0.5)), url(../assets/ba1.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -52,63 +66,167 @@ header{
     display: flex;
     align-items: center;
 }
-.texto-principal{
+
+.texto-principal {
     text-align: right;
 }
-button.texto-principal{
+
+button.texto-principal {
     gap: 1rem;
 }
-#title-h3{
+
+#title-h3 {
     text-transform: uppercase;
     font-size: .8rem;
     display: flex;
     justify-content: center;
     padding-top: 1rem;
 }
-#oradores{
-font-size: 1.8rem;
-font-weight: 700;
-text-transform: uppercase;
-display: flex;
-justify-content: center;
-color: #3b3b3b;
+
+#oradores {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: #3b3b3b;
 }
-.oradores-card{
+
+.oradores-card {
     margin: 1rem;
 }
+
 #cards {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.orador1, .orador2, .orador3, .orador4{
+.orador1,
+.orador2,
+.orador3,
+.orador4 {
     font-size: .7rem;
     font-weight: 700;
     display: inline-block;
     border-radius: 3px;
     padding: 3px;
 }
-.orador2, .orador3, .orador4{
+
+.orador2,
+.orador3,
+.orador4 {
     color: #ffffff;
 }
-.orador1{
-background-color: #ffd414;
+
+.orador1 {
+    background-color: #eec40a;
 }
-.orador2{
-background-color: #0dbebe;
+
+.orador2 {
+    background-color: #0dbebe;
 }
-.orador3{
-background-color: #807e7e;
+
+.orador3 {
+    background-color: #807e7e;
 }
-.orador4{
-background-color: #c50f0f;
+
+.orador4 {
+    background-color: #c50f0f;
 }
-.card-title{
+
+.card-title {
     font-size: 1.2rem;
 }
-.card-text{
+
+.card-text {
     font-size: .8rem;
+}
+
+.honolulu {
+    width: 100%;
+}
+
+div.col.img {
+    padding: 0;
+}
+
+.col.bsas {
+    background-color: #3b3b3b;
+    color: #ffffff;
+    padding-right: 0;
+}
+
+h2#bs-as {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    padding-right: 0;
+}
+
+p#p-bsas {
+    font-size: .9rem;
+    padding-right: 0;
+}
+
+.btn.btn-outline-light.conoce-mas {
+    font-size: .8rem;
+}
+
+#section3 {
+    margin: 1rem;
+}
+
+.p-form {
+    display: flex;
+    justify-content: center;
+
+}
+
+#charla {
+    text-decoration: underline dotted;
+    padding-left: .2rem;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.btn.btn-success,
+.btn.btn-success:hover {
+    background-color: #87c03d;
+    border: #87c03d;
+}
+
+.formulario {
+    display: grid;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(12, 45, 82), rgb(6, 70, 100));
+}
+
+ul.footer {
+    display: flex;
+    gap: 2rem;
+}
+
+.lista-footer {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: .9rem;
+}
+
+.lista-footer:hover {
+    color: #ffffff;
+    transition: all;
+    transition-duration: 300ms;
 }
 
 @media (min-width: 768px) {
@@ -120,6 +238,8 @@ background-color: #c50f0f;
 
 
 
-
-
-/*agregar menu hamburguesa*/
+/*1- agregar menu hamburguesa
+  2- header pantalla chica que ocupe todo el ancho el texto
+  3- oradores column
+  4- foto y sexto section2
+  5- listado del footer se desborda*/
