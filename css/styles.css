@@ -49,13 +49,11 @@ header{
     background-position: center;
     position: relative;
     color: #ffffff;
+    display: flex;
+    align-items: center;
 }
 .texto-principal{
-    margin-right: 1rem;
     text-align: right;
-}
-.parrafo-principal{
-    margin-left: 20%;
 }
 button.texto-principal{
     gap: 1rem;
