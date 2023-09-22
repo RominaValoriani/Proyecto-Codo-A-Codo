@@ -6,18 +6,23 @@
 
 body {
     overflow-x: hidden;
+    position: relative;
 }
 
-nav {
+/* nav */
+nav.navbar {
+    background-color: #3b3b3b;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center; 
     padding: 1rem;
-    background-color: #3b3b3b;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 2; 
+}
+nav a {
+    line-height: 1.5;
 }
 
 .logo-left {
@@ -27,34 +32,52 @@ nav {
 }
 
 .logo {
-    width: 5rem;
+    width: 4.5rem;
 }
 
 .h2-conf {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: white;
 }
 
-.lista {
+.lista-nav {
     text-decoration: none;
     color: #9c9c9c;
 }
-
-.lista:hover {
+.lista-nav:hover {
     color: #ffffff;
     transition: all;
     transition-duration: 300ms;
 }
-
+.btn.open {
+    border-radius: 5px;
+    border: 1px solid #9c9c9c;
+    background-color: #9c9c9c;
+}
+.btn.open:hover {
+    box-shadow: 0 0 5px #cccccc;
+    background-color: #9c9c9c;
+    transition: all;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
 .menu {
-    display: flex;
+    font-size: .9rem;
     margin-right: 1rem;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.menu.active {
+    max-height: 640px;
 }
 
 #comprar {
     color: #27ce3d;
 }
 
+/* header */
 header {
     width: 100%;
     height: 70vh;
@@ -75,6 +98,7 @@ button.texto-principal {
     gap: 1rem;
 }
 
+/* main */
 #title-h3 {
     text-transform: uppercase;
     font-size: .8rem;
@@ -202,6 +226,7 @@ textarea.form-control {
     justify-content: center;
 }
 
+/* footer */
 footer {
     margin-top: 1rem;
     display: flex;
@@ -229,16 +254,22 @@ ul.footer {
     transition-duration: 300ms;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
+    nav .btn {
+        display: none;
+    }
+
     .menu {
+        max-height: 640px;
+        width: auto;
+        display: flex;
         gap: .5rem;
     }
 
 }
 
 
-
-/*1- agregar menu hamburguesa
+/*
   2- header pantalla chica que ocupe todo el ancho el texto
   3- oradores column
   4- foto y sexto section2
