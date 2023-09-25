@@ -258,19 +258,22 @@ ul.footer {
     nav .btn {
         display: none;
     }
-
     .menu {
         max-height: 640px;
         width: auto;
         display: flex;
         gap: .5rem;
     }
-
 }
-
-
+@media (max-width: 768px) {
+    div#cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+header{
+    padding-right: 15px;
+}
+}
 /*
-  2- header pantalla chica que ocupe todo el ancho el texto
-  3- oradores column
-  4- foto y sexto section2
+  4- foto y sexto section2  conoce mas --> pantalla chica que quede el texto debajo de la imagen
   5- listado del footer se desborda*/
