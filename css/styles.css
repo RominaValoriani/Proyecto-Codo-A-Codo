@@ -172,23 +172,25 @@ button.texto-principal {
 }
 
 div.col.img {
-    padding: 0;
+    background-image: url(../assets/honolulu.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .col.bsas {
     background-color: #3b3b3b;
     color: #ffffff;
-    padding-right: 0;
+    padding: 10px; 
 }
 
 h2#bs-as {
     font-size: 1.4rem;
-    margin: 1rem 0;
-    padding-right: 0;
+
 }
 
 p#p-bsas {
-    font-size: .9rem;
+    font-size: .8rem;
     padding-right: 0;
 }
 
@@ -201,18 +203,19 @@ p#p-bsas {
 }
 
 .p-form {
-    display: flex;
-    justify-content: center;
-
+    text-align: center;
 }
 
 #charla {
     text-decoration: underline dotted;
-    padding-left: .2rem;
 }
 
 textarea.form-control {
     resize: none;
+}
+p.nota{
+    font-size: .7rem;
+    color: #807e7e;
 }
 
 .btn.btn-success,
@@ -221,25 +224,20 @@ textarea.form-control {
     border: #87c03d;
 }
 
-.formulario {
-    display: grid;
-    justify-content: center;
-}
-
 /* footer */
 footer {
     margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     background: linear-gradient(to right, rgb(12, 45, 82), rgb(6, 70, 100));
 }
 
 ul.footer {
     display: flex;
-    gap: 2rem;
+    gap: .5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .lista-footer {
@@ -275,5 +273,5 @@ header{
 }
 }
 /*
-  4- foto y sexto section2  conoce mas --> pantalla chica que quede el texto debajo de la imagen
-  5- listado del footer se desborda*/
+  4- foto y texto section2  conoce mas --> pantalla chica que quede el texto debajo de la imagen
+  6- sacar espacio en blanco margen derecho de lugarfecha*/
