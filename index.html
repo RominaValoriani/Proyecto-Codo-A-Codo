@@ -14,14 +14,14 @@
             <img class="logo" src="assets/codoacodo.png" alt="Logo de Codo a Codo">
             <h2 class="h2-conf">Conf Bs As</h2>
         </div>
-            <button class="btn open" title="menu principal"><img src="assets/icons/menu.svg" alt="Botón de Menu"></button>
-            <ul class="menu">
-                <li><a class="lista-nav" href="#conferencia">La conferencia</a></li>
-                <li><a class="lista-nav" href="#losoradores">Los oradores</a></li>
-                <li><a class="lista-nav" href="#lugarfecha">El lugar y la fecha</a></li>
-                <li><a class="lista-nav" href="#conviertete">Conviértete en orador</a></li>
-                <li><a class="lista-nav" href="#comprarticket"><span id="comprar">Comprar tickets</span></a></li>
-            </ul>
+        <button class="btn open" title="menu principal"><img src="assets/icons/menu.svg" alt="Botón de Menu"></button>
+        <ul class="menu">
+            <li><a class="lista-nav" href="#conferencia">La conferencia</a></li>
+            <li><a class="lista-nav" href="#losoradores">Los oradores</a></li>
+            <li><a class="lista-nav" href="#lugarfecha">El lugar y la fecha</a></li>
+            <li><a class="lista-nav" href="#conviertete">Conviértete en orador</a></li>
+            <li><a class="lista-nav" href="comprar_tickets.html"><span id="comprar">Comprar tickets</span></a></li>
+        </ul>
     </nav>
     <header id="conferencia">
         <div class="row justify-content-around">
@@ -34,8 +34,9 @@
                     el
                     futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los
                     oradores de primer nivel que tenemos para tí. Te esperamos!</p>
-                    <a href="#conviertete"><button class="btn btn-outline-light texto-principal">Quiero ser orador</button></a>
-                <button class="btn btn-success texto-principal">Comprar tickets</button>
+                <a href="#conviertete"><button class="btn btn-outline-light texto-principal">Quiero ser
+                        orador</button></a>
+                <a href="comprar_tickets.html"><button class="btn btn-success texto-principal">Comprar tickets</button></a>
             </div>
     </header>
     <main>
@@ -84,19 +85,21 @@
                 </div>
             </div>
         </section>
-        <section id="lugarfecha">
-            <div class="section2">
-                <div class="row row-cols-2">
-                    <div class="col img">
-                    </div>
-                    <div class="col bsas" id="conoce">
-                        <h2 id="bs-as">Bs As - Octubre</h2>
-                        <p id="p-bsas">Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600 km2) de superficie.</p>
-                        <a href="#conoce"> <button type="button" class="btn btn-outline-light conoce-mas">Conocé más</button></a>
-                    </div>
-                </div>
+        <div id="lugarfecha">
+            <div id="conoce">
+                <img id="img-honolulu" src="assets/honolulu.jpg" alt="imagen de Honolulu">
             </div>
-        </section>
+            <div id="texto-honolulu">
+                <h2 id="bs-as">Bs As - Octubre</h2>
+                <p id="p-bsas">Buenos Aires es la provincia y localidad más grande del estado de Argentina, en los
+                    Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque
+                    el nombre Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el
+                    condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad
+                    (aproximadamente 600 km2) de superficie.</p>
+                <a href="#conoce"> <button type="button" class="btn btn-outline-light conoce-mas">Conocé
+                        más</button></a>
+            </div>
+        </div>
         <section id="section3">
             <h3 id="title-h3">Conviértete en un</h3>
             <h3><span id="oradores">Orador</span></h3>
@@ -153,6 +156,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        <script src="scripts/index.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
