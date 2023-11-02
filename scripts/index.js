@@ -7,40 +7,52 @@ const menuList = d.querySelector('nav .menu');
 menuButton.onclick = () => menuList.classList.toggle('active');
 
 
-//comprar tickets
+// venta de tickets
+//datos
+const valorTickets = 200;
+const categoria = document.getElementById("categoria");
+const cantidadTickets = document.getElementById("cantidadTickets");
+let descuento = 0;
 
-// Datos de entrada
-const precioEntrada = 200;
+//elegir categoria
+categoria.addEventListener("change", function() {
+    switch (categoria.value) {
+        case 'estudiante':
+            descuento = 0.8;
+            break;
+        case 'trainee':
+            descuento = 0.5;
+            break;
+        case 'junior':
+            descuento = 0.15;
+            break;
+        default:
+            descuento = 0;
+    }
+});
 
-// Solicitar al usuario que ingrese la cantidad de entradas
-const cantidadEntradas = parseInt(prompt("Ingrese la cantidad de entradas:", 1));
+//Ingresar cantidad, verificar numero valido y calcular importe a pagar 
+function comprarTickets() {
+    const cantidad = parseInt(document.getElementById("cantidadTickets").value.trim() || 0);
 
-// Validar que la cantidad de entradas sea un número positivo
-if (isNaN(cantidadEntradas) || cantidadEntradas <= 0) {
-    alert("Por favor, ingrese un número válido de entradas.");
-} else {
-    // Solicitar al usuario que ingrese la categoría
-    const categoria = prompt("Ingrese la categoría (Estudiante, Trainee, Junior):").toLowerCase();
-
-    // Función para calcular el descuento
-    function calcularDescuento(categoria) {
-        switch (categoria) {
-            case 'estudiante':
-                return 0.8; // 80% de descuento
-            case 'trainee':
-                return 0.5; // 50% de descuento
-            case 'junior':
-                return 0.15; // 15% de descuento
-            default:
-                return 0; // Sin descuento por defecto
-        }
+    if (isNaN(cantidad) || cantidad <= 0 || !Number.isInteger(cantidad)) {
+        alert("Por favor, ingresa una cantidad válida de tickets.");
+        return "Total a pagar: $0.00";
     }
 
-    // Calcular el descuento y el precio total
-    const descuento = calcularDescuento(categoria);
-    const precioTotal = precioEntrada * cantidadEntradas * (1 - descuento);
+    let totalApagar = valorTickets * cantidad * (1 - descuento);
+    return `Total a pagar: $${totalApagar.toFixed(2)}`;
+}
 
-    // Mostrar el resultado
-    alert(`Precio total a pagar: $${precioTotal}`);
-    //console.log(`Precio total a pagar: $${precioTotal}`);
+//borrar los datos
+function borrarCampos() {
+    document.getElementById("cantidadTickets").value = "";
+    document.getElementById("totalPagar").innerText = "Total a pagar: $";
+    document.getElementById("categoria").value = "estudiante";
+}
+
+//mostrar resumen de importe a pagar
+function mostrarResumen() {
+    const resumen = comprarTickets();
+    document.getElementById("totalPagar").innerText = resumen;
 }
