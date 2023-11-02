@@ -46,6 +46,9 @@ function comprarTickets() {
 
 //borrar los datos
 function borrarCampos() {
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = "";
+    document.getElementById("exampleFormControlInput1").value = "";
     document.getElementById("cantidadTickets").value = "";
     document.getElementById("totalPagar").innerText = "Total a pagar: $";
     document.getElementById("categoria").value = "estudiante";
